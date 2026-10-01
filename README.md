@@ -111,6 +111,18 @@ to be a list of rules. It can be a situation.**
 The rest of this page is largely about what happened after we stopped
 explaining the situation quite so much.
 
+## What “empty” means in these experiments
+
+SubWave does not allow a presenter name or Soul to be an empty string. So when we write empty below, we mean as semantically empty as we could practically make it, not literally blank.
+One of our test stations really does run with presenter names such as:
+`.`   `#`  `!`  `Q`
+This is useful as a low-information baseline, but it is not perfectly neutral. Those values can leak back into generated speech and formatting. For example:
+11:53:43  BANTER
+They are spelling coffee, !. And it is getting cold.
+
+So an “empty-name” test has an important caveat: the placeholder itself can become part of the show.
+In other words, ! contains almost no character information, but it still has punctuation, visual identity and grammatical consequences. We therefore use “empty” below as shorthand for minimal intentional semantic steering, not absence of input.
+
 ------------------------------------------------------------------------
 
 # Show titles as the sole instruction
@@ -148,7 +160,9 @@ mean**.
 That leaves room for the title to become a premise rather than an
 instruction.
 
-A small example from an unexplained-show experiment:
+
+A small example from an unexplained-show experiment: 
+(note that `!` is actually a DJ)
 
 ``` text
 11:53:43  BANTER
