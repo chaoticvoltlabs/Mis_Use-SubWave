@@ -114,14 +114,21 @@ explaining the situation quite so much.
 ## What “empty” means in these experiments
 
 SubWave does not allow a presenter name or Soul to be an empty string. So when we write empty below, we mean as semantically empty as we could practically make it, not literally blank.
+
 One of our test stations really does run with presenter names such as:
+
 `.`   `#`  `!`  `Q`
+
 This is useful as a low-information baseline, but it is not perfectly neutral. Those values can leak back into generated speech and formatting. For example:
+
+``` text
 11:53:43  BANTER
 They are spelling coffee, !. And it is getting cold.
+```
 
 So an “empty-name” test has an important caveat: the placeholder itself can become part of the show.
-In other words, ! contains almost no character information, but it still has punctuation, visual identity and grammatical consequences. We therefore use “empty” below as shorthand for minimal intentional semantic steering, not absence of input.
+
+In other words, `!` contains almost no character information, but it still has punctuation, visual identity and grammatical consequences. We therefore use “empty” below as shorthand for minimal intentional semantic steering, not absence of input.
 
 ------------------------------------------------------------------------
 
